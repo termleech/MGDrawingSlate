@@ -9,8 +9,7 @@ Simply copy ```MGDrawingSlate.h``` and ```MGDrawingSlate.m``` to your project. T
 To create the MGDrawingSlate, use
 
 ```MGDrawingSlate *drawingSlate = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(x, y, width, height)];
-[drawingSlate addToSubview];
-```
+[drawingSlate addToSubview];```
 
 Alternatively, if you would prefer to position and size the drawing slate in Interface Builder itself, just create a placeholder view. In your ```viewDidLoad``` method, get the frame of the placeholder view, remove it from the superview, and initialize the MGDrawingSlate with that frame instead.
 
@@ -19,18 +18,15 @@ In addition, you can do several other things with the the MGDrawingSlate, like c
 ##Customization
 Because the MGDrawingSlate uses a UIBezierPath, it offers a lot of customizability right out of the box. In addition, MGDrawingSlate includes methods that make it easier to customize frequently-modified properties of the drawing path, namely the color and the line weight. To change the color, use
 
-```[drawingSlate changeColorTo:whateverUIColorYouWant];
-```
+```[drawingSlate changeColorTo:whateverUIColorYouWant];```
 
 and to change the line weight, use:
 
-```[drawingSlate changeLineWeightTo:whateverIntegerYouWant];
-```
+```[drawingSlate changeLineWeightTo:whateverIntegerYouWant];```
 
 Of course, you can also change any properties of the drawing slate's ```drawingPath``` directly. Just use
 
-```drawingSlate->whateverProperty = desiredValue;
-```
+```drawingSlate->whateverProperty = desiredValue;```
 
 See the [UIBezierPath documentation](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIBezierPath_class/Reference/Reference.html) for more information on the properties you can change.
 
